@@ -16,9 +16,21 @@
             </md-table-cell>
         </md-table-row>
         <md-table-row>
-            <md-table-cell><input type="text"></md-table-cell>
-            <md-table-cell><input type="text"></md-table-cell>
-            <md-table-cell><input type="text"></md-table-cell>
+            <md-table-cell></md-table-cell>
+            <md-table-cell>
+                <md-field :class="messageClass">
+                    <label>Keyword</label>
+                    <md-input v-model="required" required></md-input>
+                    <span class="md-error">Need to specify a keyword</span>
+                </md-field>
+            </md-table-cell>
+            <md-table-cell>
+                <md-field :class="messageClass">
+                    <label>Text</label>
+                    <md-input v-model="required" required></md-input>
+                    <span class="md-error">Need to specify text to display</span>
+                </md-field>
+            </md-table-cell>
             <md-table-cell>
                 <img src="@/assets/icons/save.svg" alt="Save">
             </md-table-cell>
