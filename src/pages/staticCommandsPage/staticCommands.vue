@@ -4,7 +4,7 @@
             <h1>This is the StaticCommands page</h1>
         </div>
         <div class="row-span-1 place-self-center">
-            <data-table :commands="commands" class="border-blue-600 border-6" />
+            <data-table :commands="commands"/>
         </div>
         <div class="row-span-1"></div>
     </div>

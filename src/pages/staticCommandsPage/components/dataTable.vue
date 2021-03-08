@@ -1,20 +1,24 @@
 <template>
-    <table class="table-auto border border-collapse border-green-800">
-        <thead>
-            <tr class="bg-gray-300">
-                <td>Id</td>
-                <td>Keyword</td>
-                <td>Text</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr v-for="command in commands" :key="command.Id">
-                <td>{{ command.Id }}</td>
-                <td>{{ command.Keyword }}</td>
-                <td>{{ command.Text }}</td>
-            </tr>
-        </tbody>
-    </table>
+    <md-table>
+        <md-table-row>
+            <md-table-head>Id</md-table-head>
+            <md-table-head>Keyword</md-table-head>
+            <md-table-head>Text</md-table-head>
+            <md-table-head>Edit</md-table-head>
+        </md-table-row>
+        <md-table-row v-for="command in commands" :key="command.Id">
+            <md-table-cell>{{ command.Id }}</md-table-cell>
+            <md-table-cell>{{ command.Keyword }}</md-table-cell>
+            <md-table-cell>{{ command.Text }}</md-table-cell>
+            <md-table-cell>xxxx</md-table-cell>
+        </md-table-row>
+        <md-table-row>
+            <md-table-cell><input type="text"></md-table-cell>
+            <md-table-cell><input type="text"></md-table-cell>
+            <md-table-cell><input type="text"></md-table-cell>
+            <md-table-cell></md-table-cell>
+        </md-table-row>
+    </md-table>
 </template>
 
 <script>
