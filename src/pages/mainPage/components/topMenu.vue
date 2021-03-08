@@ -1,7 +1,8 @@
 <template>
   <div class="top-menu">
-      <router-link class="top-menu__btn" v-for="item in items" :to="item.link">{{ item.name }}</router-link>
-      
+      <router-link class="top-menu__btn" v-for="item in items" :key="item.name" :to="item.link">
+          {{ item.name }}
+     </router-link>
   </div>
 </template>
 
