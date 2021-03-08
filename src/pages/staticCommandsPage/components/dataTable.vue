@@ -1,7 +1,7 @@
 <template>
   <table>
         <thead>
-            <tr>
+            <tr class="bg-gray-300">
                 <td>Id</td>
                 <td>Keyword</td>
                 <td>Text</td>
