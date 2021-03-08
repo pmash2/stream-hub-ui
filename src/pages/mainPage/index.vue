@@ -24,8 +24,8 @@ export default {
                 name: "Home",
             },
             {
-                link: "/contact",
-                name: "Contact",
+                link: "/static-commands",
+                name: "Static Commands",
             },
         ]
       }
