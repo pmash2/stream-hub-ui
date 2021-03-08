@@ -16,7 +16,9 @@
             <md-table-cell><input type="text"></md-table-cell>
             <md-table-cell><input type="text"></md-table-cell>
             <md-table-cell><input type="text"></md-table-cell>
-            <md-table-cell></md-table-cell>
+            <md-table-cell>
+                <img src="@/assets/icons/save.svg" alt="Save">
+            </md-table-cell>
         </md-table-row>
     </md-table>
 </template>
