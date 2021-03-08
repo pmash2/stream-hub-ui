@@ -1,5 +1,5 @@
 <template>
-  <table>
+    <table class="table-auto border border-collapse border-green-800">
         <thead>
             <tr class="bg-gray-300">
                 <td>Id</td>

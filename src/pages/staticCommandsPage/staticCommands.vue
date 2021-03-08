@@ -1,7 +1,12 @@
 <template>
-    <div>
-        <h1>This is the StaticCommands page</h1>
-        <data-table :commands="commands" />
+    <div class="grid grid-flow-col grid-rows-3 grid-cols-1">
+        <div class="row-span-1 col-span-1">
+            <h1>This is the StaticCommands page</h1>
+        </div>
+        <div class="row-span-1 place-self-center">
+            <data-table :commands="commands" class="border-blue-600 border-6" />
+        </div>
+        <div class="row-span-1"></div>
     </div>
 </template>
 
