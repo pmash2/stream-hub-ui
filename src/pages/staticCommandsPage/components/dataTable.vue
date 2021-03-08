@@ -10,7 +10,10 @@
             <md-table-cell>{{ command.Id }}</md-table-cell>
             <md-table-cell>{{ command.Keyword }}</md-table-cell>
             <md-table-cell>{{ command.Text }}</md-table-cell>
-            <md-table-cell>xxxx</md-table-cell>
+            <md-table-cell>
+                <img src="@/assets/icons/save.svg" alt="Save" class="inline-block">
+                <img src="@/assets/icons/delete.svg" alt="Delete" class="inline-block">
+            </md-table-cell>
         </md-table-row>
         <md-table-row>
             <md-table-cell><input type="text"></md-table-cell>
