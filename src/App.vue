@@ -1,8 +1,54 @@
 <template>
   <div id="app">
-    <router-view/>
+    <md-app>
+      <md-app-drawer md-permanent="full">
+        <md-app-toolbar class="md-transparent" md-elevation="0">
+          Navigation
+        </md-app-toolbar>
+
+        <md-list>
+          <md-list-item v-for="item in menuItems" :key="item.name">
+            <md-icon>
+              {{ item.icon }}
+            </md-icon>
+            <router-link :to="item.link">
+              {{ item.name }}
+            </router-link>
+          </md-list-item>
+        </md-list>
+      </md-app-drawer>
+      <md-app-content>
+        <router-view/>
+      </md-app-content>
+    </md-app>
   </div>
 </template>
+
+<script>
+export default {
+  data: function () {
+      return {
+        menuItems: [
+            {
+                link: "/about",
+                name: "About",
+                icon: "save",
+            },
+            {
+                link: "/",
+                name: "Home",
+                icon: "save",
+            },
+            {
+                link: "/static-commands",
+                name: "Static Commands",
+                icon: "save",
+            },
+        ]
+      }
+  }
+}
+</script>
 
 <style lang="scss">
 #app {
