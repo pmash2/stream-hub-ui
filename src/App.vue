@@ -46,6 +46,11 @@ export default {
                 name: "Static Commands",
                 icon: "save",
             },
+            {
+                link: "/overlay",
+                name: "Overlay",
+                icon: "picture_in_picture_alt",
+            },
         ],
         menuVisible: true,
       }

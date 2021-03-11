@@ -23,6 +23,11 @@ const routes = [
     name: 'StaticCommands',
     component: () => import('../pages/staticCommandsPage/staticCommands.vue')
   },
+  {
+    path: '/overlay',
+    name: 'Overlay',
+    component: () => import('../pages/overlayPage/overlay.vue')
+  },
 ]
 
 const router = new VueRouter({
