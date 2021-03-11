@@ -51,7 +51,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -71,5 +71,11 @@ export default {
       color: #42b983;
     }
   }
+}
+
+// Demo purposes only
+.md-drawer {
+  width: 230px;
+  //max-width: calc(100vw - 125px);
 }
 </style>
