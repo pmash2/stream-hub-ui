@@ -11,8 +11,8 @@
             <md-table-cell>{{ command.Keyword }}</md-table-cell>
             <md-table-cell>{{ command.Text }}</md-table-cell>
             <md-table-cell>
-                <img src="@/assets/icons/save.svg" alt="Save" class="inline-block">
-                <img src="@/assets/icons/delete.svg" alt="Delete" class="inline-block">
+                <md-icon>save</md-icon>
+                <md-icon>delete</md-icon>
             </md-table-cell>
         </md-table-row>
         <md-table-row>
@@ -32,7 +32,7 @@
                 </md-field>
             </md-table-cell>
             <md-table-cell>
-                <img src="@/assets/icons/save.svg" alt="Save">
+                <md-icon>save</md-icon>
             </md-table-cell>
         </md-table-row>
     </md-table>

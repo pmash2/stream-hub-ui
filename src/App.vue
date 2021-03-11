@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <md-app>
       <md-app-drawer md-permanent="full">
         <md-app-toolbar class="md-transparent" md-elevation="0">
