@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <md-app>
-      <md-app-drawer md-permanent="full">
+    <md-app >
+      <md-app-drawer md-permanent="full" v-show="menuVisible">
         <md-app-toolbar class="md-transparent" md-elevation="0">
           Navigation
         </md-app-toolbar>
@@ -19,6 +19,7 @@
         </md-list>
       </md-app-drawer>
       <md-app-content>
+        <div v-on:click="toggleDrawer"><md-icon>list</md-icon></div>
         <router-view/>
       </md-app-content>
     </md-app>
@@ -45,9 +46,15 @@ export default {
                 name: "Static Commands",
                 icon: "save",
             },
-        ]
+        ],
+        menuVisible: true,
       }
-  }
+  },
+  methods: {
+    toggleDrawer: function () {
+      this.menuVisible = !this.menuVisible;
+    }
+}
 }
 </script>
 
