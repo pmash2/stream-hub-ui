@@ -92,4 +92,8 @@ export default {
   width: 230px;
   //max-width: calc(100vw - 125px);
 }
+
+.md-app-content {
+  padding: 0px;
+}
 </style>
