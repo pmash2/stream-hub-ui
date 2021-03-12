@@ -41,5 +41,34 @@
 <script>
 export default {
   name: 'overlay',
+  emits: ['toggle-drawer'],
+  mounted(el) {
+      this.$emit("toggle-drawer");
+  },
 }
 </script>
+
+<style lang="scss" scoped>
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h2 {
+  font-size: 48px;
+  vertical-align: center;
+}
+
+.cameraBorder {
+  height: 365px;
+  width: 510px;
+}
+
+.streamPanel {
+  height: 890px;
+  width: 1583px;
+}
+
+.fullScreen {
+  height: 1080px;
+}
+</style>
