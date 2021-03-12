@@ -16,7 +16,6 @@
         <div id="lowerPanelContent" class="row-span-1 col-span-9 bg-gray-900 text-white grid grid-cols-2">
             <div id="todayMessage" class="col-span-1 text-red-900">Placeholder text</div>
             <div id="todos" class="col-span-1">
-                @*<iframe id="todoFrame" class="h-full w-full" src="../assets/TODO.html"></iframe>*@
             </div>
         </div>
         <div id="spacer" class="row-span-4 col-span-1"></div>
