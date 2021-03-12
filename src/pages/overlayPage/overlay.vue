@@ -1,5 +1,4 @@
 <template>
-  <div>
     <div id="allContent" class="fullScreen grid grid-rows-6 grid-cols-12 grid-flow-col h-full">
         <div id="screenArea" class="row-span-5 col-span-9 relative">
             <div id="screenSource" class="bg-white z-10 streamPanel opacity-0 h-full"></div>
@@ -37,7 +36,6 @@
             <img src="@/assets/pmashBanner.png" class="pmashBanner absolute inset-x-0 bottom-0 pb-2" width="324px" height="76px" />
         </div>
     </div>
-  </div>
 </template>
 
 <script>

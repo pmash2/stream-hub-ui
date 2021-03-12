@@ -19,8 +19,10 @@
         </md-list>
       </md-app-drawer>
       <md-app-content>
-        <div v-on:click="toggleDrawer"><md-icon>list</md-icon></div>
-        <router-view/>
+        <div>
+          <div v-on:click="toggleDrawer" class="z-50 absolute"><md-icon>list</md-icon></div>
+          <router-view/>
+        </div>
       </md-app-content>
     </md-app>
   </div>
