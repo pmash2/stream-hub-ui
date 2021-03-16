@@ -36,16 +36,14 @@
       ></div>
     </div>
     <div id="chatArea" class="row-span-4 col-span-2 relative bg-red-200">
-      <chat-hub :messages="messages" />
-
-      <leaderboard :users="users" class="mt-48" />
-
-      <img
-        src="@/assets/pmashBanner.png"
-        class="pmashBanner absolute inset-x-0 bottom-0 pb-2 mt-56"
-        width="324px"
-        height="76px"
+      <game-status
+        :mainText="gameStatus.mainText"
+        :subText="gameStatus.subText"
       />
+      <div>
+        <chat-hub :messages="messages" />
+      </div>
+      <leaderboard :users="users" class="absolute inset-x-0 bottom-0" />
     </div>
   </div>
 </template>
@@ -53,9 +51,10 @@
 <script>
 import ChatHub from "./components/chatHub";
 import Leaderboard from "./components/leaderboard";
+import GameStatus from "./components/gameStatus";
 
 export default {
-  components: { ChatHub, Leaderboard },
+  components: { ChatHub, Leaderboard, GameStatus },
   name: "overlay",
   emits: ["toggle-drawer"],
   mounted(el) {
@@ -88,6 +87,10 @@ export default {
           points: 5000,
         },
       ],
+      gameStatus: {
+        mainText: "pmash2 has won the game!",
+        subText: "+100 points!   ",
+      },
     };
   },
 };
