@@ -36,9 +36,8 @@
       ></div>
     </div>
     <div id="chatArea" class="row-span-4 col-span-2 relative bg-white">
-      <md-list v-for="msg in messages" :key="msg.message">
-        <chat-message :message="msg.message"></chat-message>
-      </md-list>
+      <chat-hub :messages="messages" />
+
       <img
         src="@/assets/pmashBanner.png"
         class="pmashBanner absolute inset-x-0 bottom-0 pb-2"
@@ -50,10 +49,10 @@
 </template>
 
 <script>
-import chatMessage from "./components/chatMessage";
+import ChatHub from "./components/chatHub.vue";
 
 export default {
-  components: { chatMessage },
+  components: { ChatHub },
   name: "overlay",
   emits: ["toggle-drawer"],
   mounted(el) {
@@ -67,6 +66,9 @@ export default {
         },
         {
           message: "second message",
+        },
+        {
+          message: "third message",
         },
       ],
     };
