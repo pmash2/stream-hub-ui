@@ -35,12 +35,14 @@
         class="cameraBorder absolute bg-black bottom-0 right-0 rounded-lg z-30"
       ></div>
     </div>
-    <div id="chatArea" class="row-span-4 col-span-2 relative bg-white">
+    <div id="chatArea" class="row-span-4 col-span-2 relative bg-red-200">
       <chat-hub :messages="messages" />
+
+      <leaderboard :users="users" class="mt-48" />
 
       <img
         src="@/assets/pmashBanner.png"
-        class="pmashBanner absolute inset-x-0 bottom-0 pb-2"
+        class="pmashBanner absolute inset-x-0 bottom-0 pb-2 mt-56"
         width="324px"
         height="76px"
       />
@@ -49,10 +51,11 @@
 </template>
 
 <script>
-import ChatHub from "./components/chatHub.vue";
+import ChatHub from "./components/chatHub";
+import Leaderboard from "./components/leaderboard";
 
 export default {
-  components: { ChatHub },
+  components: { ChatHub, Leaderboard },
   name: "overlay",
   emits: ["toggle-drawer"],
   mounted(el) {
@@ -69,6 +72,20 @@ export default {
         },
         {
           message: "third message",
+        },
+      ],
+      users: [
+        {
+          name: "pmash2",
+          points: 1000,
+        },
+        {
+          name: "armanx86",
+          points: 5000,
+        },
+        {
+          name: "Jochemwhite",
+          points: 5000,
         },
       ],
     };
