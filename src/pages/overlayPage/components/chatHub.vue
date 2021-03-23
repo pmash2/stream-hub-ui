@@ -15,5 +15,15 @@ export default {
   props: {
     messages: Array,
   },
+  created() {
+    // Listen to score changes coming from SignalR events
+    this.$chatHubQueue.$on("message-received", this.ChatMessageReceived);
+  },
+  methods: {
+    // This is called from the server through SignalR
+    ChatMessageReceived({ user, msg }) {
+      console.log("WE GOT IT");
+    },
+  },
 };
 </script>
