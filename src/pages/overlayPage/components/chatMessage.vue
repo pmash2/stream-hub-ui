@@ -4,7 +4,10 @@
       <img src="@/assets/logo.png" />
     </md-avatar>
 
-    <span class="md-list-item-text">{{ message }}</span>
+    <div class="md-list-item-text">
+      <span>{{ message.user }}</span>
+      <span>{{ message.message }}</span>
+    </div>
   </md-list-item>
 </template>
 
@@ -12,7 +15,7 @@
 export default {
   name: "chat-message",
   props: {
-    message: String,
+    message: Array,
   },
 };
 </script>

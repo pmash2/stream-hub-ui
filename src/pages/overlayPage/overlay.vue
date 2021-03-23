@@ -62,17 +62,7 @@ export default {
   },
   data: function () {
     return {
-      messages: [
-        {
-          message: "First message",
-        },
-        {
-          message: "second message",
-        },
-        {
-          message: "third message",
-        },
-      ],
+      messages: [],
       users: [
         {
           name: "pmash2",

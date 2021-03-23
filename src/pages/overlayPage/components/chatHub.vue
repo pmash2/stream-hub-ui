@@ -1,7 +1,7 @@
 <template>
   <div>
     <md-list v-for="msg in messages" :key="msg.message">
-      <chat-message :message="msg.message"></chat-message>
+      <chat-message :message="msg"></chat-message>
     </md-list>
   </div>
 </template>
@@ -22,7 +22,10 @@ export default {
   methods: {
     // This is called from the server through SignalR
     ChatMessageReceived({ user, msg }) {
-      console.log("WE GOT IT");
+      this.messages.push({
+        user: user,
+        message: msg,
+      });
     },
   },
 };
